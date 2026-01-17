@@ -5,7 +5,14 @@ on:
     branches: [main]
 
 jobs:
-  hello:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello
+        run: echo "Hello how are u "
+
+  job2:
     runs-on: ubuntu-latest
 
     steps:
