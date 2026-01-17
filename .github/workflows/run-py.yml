@@ -1,0 +1,14 @@
+name: run python
+
+on:
+  push:
+    branches: [main]
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: script workflow
+        run: python script.py
