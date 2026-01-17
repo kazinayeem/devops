@@ -1,0 +1,13 @@
+name: task2
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello
+        run: echo "Hello how are u "
