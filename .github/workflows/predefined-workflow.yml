@@ -1,0 +1,13 @@
+name: predefined workflows
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  predefined-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Nodejs version check
+        run: node -v
