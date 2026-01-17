@@ -2,7 +2,7 @@ name: conditional workflow
 
 on:
   push:
-    paths: -"backend/***"
+    paths: -"backend/**"
 jobs:
   conditional-workflows:
     runs-on: ubuntu-latest
