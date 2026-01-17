@@ -3,12 +3,24 @@ name: run python
 on:
   push:
     branches: [main]
+
 jobs:
   run-python:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: script workflow
+      - name: System Info (CPU, RAM, Disk)
+        run: |
+          echo "===== CPU INFO ====="
+          lscpu
+
+          echo "===== RAM INFO ====="
+          free -h
+
+          echo "===== DISK INFO ====="
+          df -h
+
+      - name: Run Python Script
         run: python script.py
